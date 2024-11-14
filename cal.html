@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Scientific Calculator</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CalCulatoR</h1>
+        <!-- Tabs to toggle between calculators -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="showCalculator('standard')">Standard Calculator</button>
+            <button class="tab-button" onclick="showCalculator('birthdate')">DOB Calculator</button>
+        </div>
+        
+        <!-- Calculator Sections -->
+        <div id="standard" class="calculator-section active">
+            <input type="text" id="display" class="display" readonly />
+            <div class="buttons">
+                <!-- Standard and Scientific buttons here -->
+                <button onclick="insert('sin(')">sin</button>
+                <button onclick="insert('cos(')">cos</button>
+                <button onclick="insert('tan(')">tan</button>
+                <button onclick="insert('log(')">log</button>
+                <button onclick="insert('sqrt(')">√</button>
+                <button onclick="insert('^')">xⁿ</button>
+                <!-- Standard calculator buttons -->
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="insert('(')">(</button>
+                <button onclick="insert(')')">)</button>
+                <button onclick="backspace()">←</button>
+                <button onclick="insert(7)">7</button>
+                <button onclick="insert(8)">8</button>
+                <button onclick="insert(9)">9</button>
+                <button onclick="insert('/')">÷</button>
+                <button onclick="insert(4)">4</button>
+                <button onclick="insert(5)">5</button>
+                <button onclick="insert(6)">6</button>
+                <button onclick="insert('*')">×</button>
+                <button onclick="insert(1)">1</button>
+                <button onclick="insert(2)">2</button>
+                <button onclick="insert(3)">3</button>
+                <button onclick="insert('-')">-</button>
+                <button onclick="insert(0)">0</button>
+                <button onclick="insert('.')">.</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="insert('+')">+</button>
+            </div>
+        </div>
+
+        <div id="birthdate" class="calculator-section">
+            <h3>Calculate Your Age</h3>
+            <label for="birthdate">Enter your birth date:</label>
+            <input type="date" id="birthdate-input" class="birthdate-input">
+            <button class="calculate-btn" onclick="calculateAge()">Calculate Age</button>
+            <p id="age-output" class="age-output"></p>
+        </div>
+    </div>
+    <div class="background">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+    </div>
+    
+    <div class="solar-system">
+        <div class="sun"></div>
+        <div class="orbit mercury"><div class="planet mercury"><span class="planet-name">Mercury</span></div></div>
+        <div class="orbit venus"><div class="planet venus"><span class="planet-name">Venus</span></div></div>
+        <div class="orbit earth"><div class="planet earth"><span class="planet-name">Earth</span></div></div>
+        <div class="orbit mars"><div class="planet mars"><span class="planet-name">Mars</span></div></div>
+        <div class="orbit jupiter"><div class="planet jupiter"><span class="planet-name">Jupiter</span></div></div>
+        <div class="orbit saturn"><div class="planet saturn"><span class="planet-name">Saturn</span></div></div>
+        <div class="orbit uranus"><div class="planet uranus"><span class="planet-name">Uranus</span></div></div>
+        <div class="orbit neptune"><div class="planet neptune"><span class="planet-name">Neptune</span></div></div>
+    </div>
+    <script src="cal.js"></script>
+</body>
+</html>
